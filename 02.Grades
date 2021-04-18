@@ -1,0 +1,38 @@
+using System;
+
+namespace _02.Grades
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double grade = double.Parse(Console.ReadLine());
+
+            GoodJob(grade);
+        }
+        static double GoodJob(double goodJob)
+        {
+            if(goodJob >=2 && goodJob <= 2.99)
+            {
+                Console.WriteLine("Fail");
+            }
+            else if(goodJob >=3 && goodJob <= 3.49)
+            {
+                Console.WriteLine("Poor");
+            }
+            else if(goodJob >=3.5 && goodJob <= 4.49)
+            {
+                Console.WriteLine("Good");
+            }
+            else if(goodJob >= 4.5 && goodJob <= 5.49)
+            {
+                Console.WriteLine("Very good");
+            }
+            else if(goodJob >=5.5 && goodJob <= 6)
+            {
+                Console.WriteLine("Excellent");
+            }
+            return goodJob;
+        }
+    }
+}
