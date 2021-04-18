@@ -1,0 +1,46 @@
+using System;
+
+namespace _05.Ordes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string products = Console.ReadLine();
+            double price = double.Parse(Console.ReadLine());
+
+            string result = GoodJob(products, price);
+
+            Console.WriteLine(result);
+        }
+        private static string GoodJob(string products, double price)
+        {
+           
+
+            switch (products)
+            {
+                case "coffee":
+                    price *= 1.50;
+                    break;
+
+                case "water":
+                    price *= 1;
+                    break;
+
+                case "coke":
+                    price *= 1.40;
+                    break;
+
+                case "snacks":
+                     price*= 2;
+                    break;
+
+                default:
+                    break;
+            }
+            return $"{price:f2}";
+
+        }
+       
+    }
+}
