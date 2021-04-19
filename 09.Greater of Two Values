@@ -1,0 +1,62 @@
+using System;
+
+namespace _09.Greater_of_Two_Values
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string command = Console.ReadLine();
+
+            if(command == "int")
+            {
+                int firstNumber = int.Parse(Console.ReadLine());
+                int secundsNumber = int.Parse(Console.ReadLine());
+
+                int result = GetMax(firstNumber, secundsNumber);
+                Console.WriteLine(result);
+            }
+            else if( command == "char")
+            {
+                char firstNumber = char.Parse(Console.ReadLine());
+                char secundsNumber = char.Parse(Console.ReadLine());
+
+                char total = (char)GetMax(firstNumber, secundsNumber);
+
+                Console.WriteLine(total);
+            }
+            else if(command == "string")
+            {
+                string firstNumber = Console.ReadLine();
+                string secundsNumber = Console.ReadLine();
+
+                string rezult = GetMax(firstNumber, secundsNumber);
+
+                Console.WriteLine(rezult);
+            }
+        }
+        private static char GetMAx(char firstNumber, char secundsNumber)
+        {
+            char total = (char)Math.Max(firstNumber, secundsNumber);
+            return (total);
+        }
+        private static int GetMax(int firstNumber, int secundsNumber)
+        {
+            int result = Math.Max(firstNumber, secundsNumber);
+            return (result);
+        }
+        private static string GetMax(string firstNumber, string secundsNumber)
+        {
+            int goodJob = firstNumber.CompareTo(secundsNumber);
+
+            if(goodJob > 0)
+            {
+                return firstNumber;
+            }
+            else
+            {
+                return secundsNumber;
+            }
+        }
+    }
+}
