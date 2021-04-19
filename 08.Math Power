@@ -1,0 +1,26 @@
+using System;
+
+namespace _08.Math_Power
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double number1 = double.Parse(Console.ReadLine());
+            double number2 = double.Parse(Console.ReadLine());
+
+            double total = GoodJob(number1, number2);
+
+            Console.WriteLine(total);
+        }
+        private static double GoodJob(double number1, double number2)
+        {
+            double rezult = 0;
+
+            rezult = Math.Pow(number1, number2);
+
+            return rezult;
+        }
+        
+    }
+}
