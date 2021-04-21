@@ -1,0 +1,45 @@
+using System;
+
+namespace _11.Math_Operations
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number1 = int.Parse(Console.ReadLine());
+            string simbol = Console.ReadLine();
+            int number2 = int.Parse(Console.ReadLine());
+
+            double reult = GetTotalResult(number1, simbol, number2);
+            Console.WriteLine(reult);
+        }
+        private static double GetTotalResult(int number1, string simbol, int number2)
+        {
+            double goodJob = 0;
+
+            switch (simbol)
+            {
+                case "+":
+                    goodJob = number1 + number2;
+                    break;
+
+                case "-":
+                    goodJob = number1 - number2;
+                    break;
+
+                case "*":
+                    goodJob = number1 * number2;
+                    break;
+
+                case "/":
+                    goodJob = number1 / number2;
+                    break;
+
+                default:
+                    break;
+            }
+            return goodJob;
+        }
+        
+    }
+}
