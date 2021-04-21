@@ -1,0 +1,59 @@
+using System;
+
+namespace _10.Multiply_Evens_by_Odds
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number = Math.Abs(int.Parse(Console.ReadLine()));
+
+            int result = GetMultipleOfEvenAndOdds(number);
+
+            Console.WriteLine(result);
+        }
+        private static int GetSumOfEvenDigits(int goodJob)
+        {
+            int even = 0;
+
+            while (goodJob >0)
+            {
+                int currentDigits = goodJob % 10;
+                goodJob = goodJob / 10;
+
+                if(currentDigits % 2 == 0)
+                {
+                    even += currentDigits;
+                }
+            }
+            return even;
+        }
+        private static int GetSumOfOddDigits(int goodJob)
+        {
+            int odd = 0;
+
+            while (goodJob >0)
+            {
+                int currentDigits = goodJob % 10;
+                goodJob = goodJob / 10;
+
+
+                if(currentDigits % 2 != 0)
+                {
+                    odd += currentDigits;
+                }
+            }
+            return odd;
+        }
+        private static int GetMultipleOfEvenAndOdds(int goodJob)
+        {
+           int  even = GetSumOfEvenDigits(goodJob);
+
+            int odd = GetSumOfOddDigits(goodJob);
+
+            return even * odd;
+
+        }
+
+    }
+}
